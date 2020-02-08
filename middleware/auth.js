@@ -5,7 +5,7 @@ function auth(req, res, next) {
     const token = req.header('x-auth-token')
 
     //Check token
-    if(!token) res.status(401).send("No token, auth denied")//Unauthorized
+    if(!token) return res.status(401).send("No token, auth denied")//Unauthorized
 
     
     try{
